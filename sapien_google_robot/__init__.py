@@ -24,16 +24,37 @@ class EverydayRobot(sapien.Widget):
         loader.set_link_min_patch_radius("link_finger_right", 0.05)
         loader.set_link_min_patch_radius("link_finger_tip_right", 0.05)
 
+        loader.set_link_material("link_wheel_left", 1.0, 1.0, 0.0)
+        loader.set_link_material("link_wheel_right", 1.0, 1.0, 0.0)
+        loader.set_link_material("link_rear_wheel_left", 1.0, 1.0, 0.0)
+        loader.set_link_material("link_rear_wheel_right", 1.0, 1.0, 0.0)
+
+        loader.fix_root_link = False
+        # loader.fix_root_link = True
+
         path = os.path.join(
             os.path.dirname(__file__), "./googlerobot_description/meta_sim.urdf"
         )
         self.robot = loader.load(path)
+        pose = self.robot.pose
         for link in self.robot.links:
-            link.disable_gravity = True
+            if link.name != "link_base":
+                link.disable_gravity = True
+
+        self.robot.pose = sapien.Pose([0, 0, 0.0640623])
+        # self.robot.pose = sapien.Pose([0, 0, 0.1])
 
         self.gripper_joints = [
             self.robot.find_joint_by_name(j)
             for j in ["joint_finger_left", "joint_finger_right"]
+        ]
+
+        self.wheel_joints = [
+            self.robot.find_joint_by_name(j)
+            for j in [
+                "joint_wheel_left",
+                "joint_wheel_right",
+            ]
         ]
 
         self.arm_joints = [
@@ -58,6 +79,7 @@ class EverydayRobot(sapien.Widget):
 
         self.set_arm_pd([2000] * 7, [200] * 7, [50] * 7)
         self.set_gripper_pd(1e4, 1e2, 0.3)
+        self.set_wheel_damping(1e5, 1e3)
 
     def _setup_passive_drives(self):
         for n in ["joint_finger_tip_left", "joint_finger_tip_right"]:
@@ -93,6 +115,15 @@ class EverydayRobot(sapien.Widget):
         for j in self.gripper_joints:
             j.set_drive_target(target)
 
+    def set_wheel_damping(self, damping, limit):
+        for j in self.wheel_joints:
+            j.set_drive_property(0, damping, limit, "acceleration")
+
+    def set_wheel_target_velocity(self, vel):
+        assert len(vel) == 2
+        self.wheel_joints[0].set_drive_velocity_target(vel[0])
+        self.wheel_joints[1].set_drive_velocity_target(vel[1])
+
     def unload(self, scene: sapien.Scene):
         scene.remove_articulation(self.robot)
 
@@ -100,7 +131,10 @@ class EverydayRobot(sapien.Widget):
 if __name__ == "__main__":
     scene = sapien.Scene()
     scene.load_widget_from_package("demo_arena", "DemoArena")
-    scene.load_widget(EverydayRobot())
+    robot = EverydayRobot()
+    scene.load_widget(robot)
+
+    robot.set_wheel_target_velocity([10, 10])
 
     scene.set_timestep(1 / 120)
 
