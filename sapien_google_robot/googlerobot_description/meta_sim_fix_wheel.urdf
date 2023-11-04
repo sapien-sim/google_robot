@@ -23,47 +23,16 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_base.glb"/>
+        <mesh filename="visual_meshes/link_base.glb"/>
       </geometry>
     </visual>
 
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_base_0.glb"/>
+        <mesh filename="collision_meshes/link_base.glb"/>
       </geometry>
     </collision>
-    <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="coarse_meshes/link_base_1.glb"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="coarse_meshes/link_base_2.glb"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="coarse_meshes/link_base_3.glb"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="coarse_meshes/link_base_4.glb"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="coarse_meshes/link_base_5.glb"/>
-      </geometry>
-    </collision>
-
   </link>
   <link name="link_wheel_left">
     <contact>
@@ -79,13 +48,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_wheel.3obj.obj"/>
+        <mesh filename="visual_meshes/link_wheel.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_wheel_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_wheel.glb"/>
       </geometry>
     </collision>
   </link>
@@ -103,13 +72,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_wheel.3obj.obj"/>
+        <mesh filename="visual_meshes/link_wheel.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_wheel_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_wheel.glb"/>
       </geometry>
     </collision>
   </link>
@@ -118,13 +87,13 @@ This file has been manually updated on <03/12/2019>.
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_rear_wheel.glb"/>
+        <mesh filename="collision_meshes/link_rear_wheel.glb"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_rear_wheel.glb"/>
+        <mesh filename="visual_meshes/link_rear_wheel.glb"/>
       </geometry>
     </visual>
   </link>
@@ -132,13 +101,13 @@ This file has been manually updated on <03/12/2019>.
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_rear_wheel.glb"/>
+        <mesh filename="collision_meshes/link_rear_wheel.glb"/>
       </geometry>
     </collision>
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_rear_wheel.glb"/>
+        <mesh filename="visual_meshes/link_rear_wheel.glb"/>
       </geometry>
     </visual>
   </link>
@@ -152,13 +121,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_torso.3obj.obj"/>
+        <mesh filename="visual_meshes/link_torso.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_torso_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_torso.glb"/>
       </geometry>
     </collision>
   </link>
@@ -171,13 +140,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_shoulder.3obj.obj"/>
+        <mesh filename="visual_meshes/link_shoulder.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_shoulder_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_shoulder.glb"/>
       </geometry>
     </collision>
   </link>
@@ -190,13 +159,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_bicep.3obj.obj"/>
+        <mesh filename="visual_meshes/link_bicep.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_bicep_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_bicep.glb"/>
       </geometry>
     </collision>
   </link>
@@ -209,13 +178,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_elbow.3obj.obj"/>
+        <mesh filename="visual_meshes/link_elbow.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_elbow_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_elbow.glb"/>
       </geometry>
     </collision>
   </link>
@@ -228,13 +197,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_forearm.3obj.obj"/>
+        <mesh filename="visual_meshes/link_forearm.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_forearm_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_forearm.glb"/>
       </geometry>
     </collision>
   </link>
@@ -247,13 +216,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_wrist.3obj.obj"/>
+        <mesh filename="visual_meshes/link_wrist.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_wrist_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_wrist.glb"/>
       </geometry>
     </collision>
   </link>
@@ -266,13 +235,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="3obj/link_gripper.3obj.obj"/>
+        <mesh filename="visual_meshes/link_gripper.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_gripper_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_gripper.glb"/>
       </geometry>
     </collision>
   </link>
@@ -286,13 +255,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_finger_base_simplified.3obj.obj"/>
+        <mesh filename="visual_meshes/link_finger_base.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_finger_base_boxified.obj"/>
+        <mesh filename="collision_meshes/link_finger_base.glb"/>
       </geometry>
     </collision>
   </link>
@@ -311,13 +280,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_finger_tip_simplified.3obj.obj"/>
+        <mesh filename="visual_meshes/link_finger_tip.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_finger_tip_boxified.obj"/>
+        <mesh filename="collision_meshes/link_finger_tip.glb"/>
       </geometry>
     </collision>
   </link>
@@ -334,15 +303,15 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_finger_nail.3obj.obj"/>
+        <mesh filename="visual_meshes/link_finger_nail.glb"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="coarse_meshes/link_finger_nail.obj"/>
-      </geometry>
-    </collision>
+    <!-- <collision> -->
+    <!--   <origin xyz="0 0 0" rpy="0 0 0"/> -->
+    <!--   <geometry> -->
+    <!--     <mesh filename="coarse_meshes/link_finger_nail.obj"/> -->
+    <!--   </geometry> -->
+    <!-- </collision> -->
   </link>
   <link name="link_finger_left">
     <inertial>
@@ -354,13 +323,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_finger_base_simplified.3obj.obj"/>
+        <mesh filename="visual_meshes/link_finger_base.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_finger_base_boxified.obj"/>
+        <mesh filename="collision_meshes/link_finger_base.glb"/>
       </geometry>
     </collision>
   </link>
@@ -379,13 +348,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_finger_tip_simplified.3obj.obj"/>
+        <mesh filename="visual_meshes/link_finger_tip.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_finger_tip_boxified.obj"/>
+        <mesh filename="collision_meshes/link_finger_tip.glb"/>
       </geometry>
     </collision>
   </link>
@@ -402,15 +371,15 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_finger_nail.3obj.obj"/>
+        <mesh filename="visual_meshes/link_finger_nail.glb"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="3obj/link_finger_nail.3obj.obj"/>
-      </geometry>
-    </collision>
+    <!-- <collision> -->
+    <!--   <origin xyz="0 0 0" rpy="0 0 0"/> -->
+    <!--   <geometry> -->
+    <!--     <mesh filename="3obj/link_finger_nail.3obj.obj"/> -->
+    <!--   </geometry> -->
+    <!-- </collision> -->
   </link>
 
   <link name="link_head_pan">
@@ -422,13 +391,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_head_pan.3obj.obj"/>
+        <mesh filename="visual_meshes/link_head_pan.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_head_pan_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_head_pan.glb"/>
       </geometry>
     </collision>
   </link>
@@ -441,13 +410,13 @@ This file has been manually updated on <03/12/2019>.
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="3obj/link_head_tilt.3obj.obj"/>
+        <mesh filename="visual_meshes/link_head_tilt.glb"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="coarse_meshes/link_head_tilt_vhacd.obj"/>
+        <mesh filename="collision_meshes/link_head_tilt.glb"/>
       </geometry>
     </collision>
   </link>

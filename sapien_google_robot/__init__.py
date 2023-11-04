@@ -29,6 +29,8 @@ class EverydayRobot(sapien.Widget):
         loader.set_link_material("link_rear_wheel_left", 0.0, 0.0, 0.0)
         loader.set_link_material("link_rear_wheel_right", 0.0, 0.0, 0.0)
 
+        loader.load_multiple_collisions_from_file = True
+
         loader.fix_root_link = False
 
         path = os.path.join(
@@ -138,7 +140,7 @@ if __name__ == "__main__":
     robot = EverydayRobot()
     scene.load_widget(robot)
 
-    robot.set_base_drive(1, 0.5)
+    # robot.set_base_drive(1, 0.5)
 
     scene.set_timestep(1 / 120)
 
